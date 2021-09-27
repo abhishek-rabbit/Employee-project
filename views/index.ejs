@@ -1,0 +1,41 @@
+<%- include('./partials/header.ejs'); -%>
+    <div class="container">
+        <%- include('./partials/messages.ejs'); -%>
+        <div class="col-md-12">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% employee.forEach(employee1=>{%>
+                    <tr>
+                        <td><%= employee1.name %></td>
+                        <td><%= employee1.designation %></td>
+                        <td><%= employee1.salary %></td>
+                        <th><span ><a href="/editEmployee?id=<%= employee1._id %>" class="btn btn-md btn-primary">Edit</a></span>&emsp;
+                            <span
+                                ><a class="btn btn-md btn-danger" href="/deleteEmployee?id=<%= employee1._id %>">Delete</a></span></th>
+
+                    </tr>
+                    <% })%>
+                   
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Operations</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <%- include('./partials/footer.ejs'); -%>

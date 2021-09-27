@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs'); -%>
+    
+    
+    <div class="d-flex justify-content-center">
+    <h1>Add Employee</h1>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form" action="/employee/new" method="post">
+                    <div class="form-group">
+                        <label for="employeeName">Employee Name</label>
+                        <input type="text" name="name" class="form-control" id="employeeName" aria-describedby="emailHelp" placeholder="Enter Employee Name">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="employeeDesignation">Designation</label>
+                        <input type="text" class="form-control" name="designation" id="employeeDesignation" placeholder="Enter Employee's Designation">
+                      </div>
+                      <div class="form-group">
+                        <label for="employeeSalary">Salary</label>
+                        <input type="text" class="form-control" name="salary" id="employeeSalary" placeholder="Enter Employee's Salary">
+                      </div>
+                      <input type="submit" class="btn btn-primary" placeholder="Add Employee">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs'); -%>
